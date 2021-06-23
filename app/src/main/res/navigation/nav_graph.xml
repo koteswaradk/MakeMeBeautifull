@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/nav_LoginSignup"
+    android:id="@+id/nav_graph">
+
+    <!--<fragment
+        app:navGraph="@navigation/nav_graph"
+        android:id="@+id/nav_bootomnavbar"
+        android:name="com.koteswara.makemebeautifull.NavBarFragment"
+        android:label="@string/navbarfragment"
+        tools:layout="@layout/bottomnavigationbar">
+        <action
+            android:id="@+id/action_nav_bootomnavbar_to_nav_Home"
+            app:destination="@id/nav_Home" />
+        <action
+            android:id="@+id/action_nav_bootomnavbar_to_nav_UserProfile"
+            app:destination="@id/nav_UserProfile" />
+        <action
+            android:id="@+id/action_nav_bootomnavbar_to_nav_Favorite"
+            app:destination="@id/nav_Favorite" />
+        <action
+            android:id="@+id/action_nav_bootomnavbar_to_nav_Search"
+            app:destination="@id/nav_Search" />
+    </fragment>-->
+    <fragment
+        android:id="@+id/nav_Home"
+        android:name="com.koteswara.makemebeautifull.ui.home.HomeFragment"
+        android:label="@string/homefragment"
+        tools:layout="@layout/home_fragment"/>
+
+    <fragment
+        android:id="@+id/nav_Favorite"
+        android:name="com.koteswara.makemebeautifull.ui.favarite.FavariteFragment"
+        android:label="@string/favorites"
+        tools:layout="@layout/favarite_fragment" />
+
+    <fragment
+        android:id="@+id/nav_Search"
+        android:name="com.koteswara.makemebeautifull.ui.loginandsignup.CreateAccountFragment"
+        android:label="@string/search"
+        tools:layout="@layout/search_fragment" />
+    <fragment
+        android:id="@+id/nav_UserProfile"
+        android:name="com.koteswara.makemebeautifull.ui.userprofile.UserProfileFragment"
+        android:label="@string/user"
+        tools:layout="@layout/userprofile_fragment" />
+    <fragment
+        android:id="@+id/nav_CreateAccount"
+        android:name="com.koteswara.makemebeautifull.ui.loginandsignup.CreateAccountFragment"
+        android:label="@string/create_new_"
+        tools:layout="@layout/fragment_create_account" />
+
+    <fragment
+        android:id="@+id/nav_ForgetPassword"
+        android:name="com.koteswara.makemebeautifull.ui.loginandsignup.ForgetPasswordFragment"
+        android:label="@string/forget_pass_"
+        tools:layout="@layout/fragment_forget_password" />
+    <activity
+        android:id="@+id/navBarActivity"
+        android:name="com.koteswara.makemebeautifull.MainActivity"
+        android:label="@string/mainacivity"
+        tools:layout="@layout/bottomnavigationbar" />
+
+    <fragment
+        android:id="@+id/nav_LoginSignup"
+        android:name="com.koteswara.makemebeautifull.ui.loginandsignup.LoginSignupFragment"
+        android:label="@string/login_"
+        tools:layout="@layout/fragment_loginsignup" >
+        <action
+            android:id="@+id/action_nav_LoginSignup_to_nav_CreateAccount"
+            app:destination="@id/nav_CreateAccount"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_nav_LoginSignup_to_nav_ForgetPassword"
+            app:destination="@id/nav_ForgetPassword"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_nav_LoginSignup_to_nav_bootomnavbar"
+            app:destination="@id/navBarActivity" />
+
+        <!--<action
+            android:id="@+id/action_nav_LoginSignup_to_nav_ForgetHome"
+            app:destination="@id/nav_ForgetHome" />-->
+    </fragment>
+
+</navigation>

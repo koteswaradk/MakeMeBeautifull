@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/nav_LoginSignup"
+    android:id="@+id/mobile_navigation">
+<!--<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDest1ination="@+id/nav_LoginSignup">-->
+
+    <fragment
+        android:id="@+id/nav_Home"
+        android:name="com.koteswara.makemebeautifull.ui.home.HomeFragment"
+        android:label="@string/homefragment"
+        tools:layout="@layout/home_fragment"/>
+
+    <fragment
+        android:id="@+id/nav_Favorite"
+        android:name="com.koteswara.makemebeautifull.ui.favarite.FavariteFragment"
+        android:label="@string/favorites"
+        tools:layout="@layout/favarite_fragment" />
+
+    <fragment
+        android:id="@+id/nav_Search"
+        android:name="com.koteswara.makemebeautifull.ui.loginandsignup.CreateAccountFragment"
+        android:label="@string/search"
+        tools:layout="@layout/search_fragment" />
+    <fragment
+        android:id="@+id/nav_UserProfile"
+        android:name="com.koteswara.makemebeautifull.ui.userprofile.UserProfileFragment"
+        android:label="@string/user"
+        tools:layout="@layout/userprofile_fragment" />
+</navigation>
